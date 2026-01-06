@@ -178,8 +178,8 @@ class DiseaseSymptomSystem:
 
         return result
 disease_model=tf.keras.models.load_model("weights_disease/disease_model")
-autoencoder=tf.keras.models.load_model("weights_disease/autoencoder/autoencoder")
-encoder=tf.keras.models.load_model("weights_disease/encoder/encoder")
+autoencoder=tf.keras.models.load_model("weights_disease/autoencoder")
+encoder=tf.keras.models.load_model("weights_disease/encoder")
 system = DiseaseSymptomSystem(disease_model, autoencoder, encoder)
 print("Loading data...")
 system.load_data()
